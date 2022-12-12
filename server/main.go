@@ -25,7 +25,7 @@ func handleStaticFiles() {
 func handleRobotsFile() {
 
 	var (
-		robotsFilePath    = "./web/static/configuration/robots.txt"
+		robotsFilePath    = "./web/static/configurations/robots.txt"
 		robotsFilePattern = "/robots.txt"
 	)
 
