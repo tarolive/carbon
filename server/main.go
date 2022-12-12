@@ -1,6 +1,7 @@
 package main
 
 import (
+	"html/template"
 	"net/http"
 )
 
@@ -8,6 +9,8 @@ func main() {
 
 	handleStaticFiles()
 	handleRobotsFile()
+
+	handleIndexPage()
 
 	listenAndServe()
 }
@@ -32,6 +35,26 @@ func handleRobotsFile() {
 	http.HandleFunc(robotsFilePattern, func(responseWriter http.ResponseWriter, request *http.Request) {
 
 		http.ServeFile(responseWriter, request, robotsFilePath)
+	})
+}
+
+func handleIndexPage() {
+
+	var (
+		baseLayoutPath   = "./web/templates/layouts/base.tmpl"
+		indexPagePath    = "./web/templates/pages/index.tmpl"
+		indexPagePattern = "/"
+	)
+
+	indexPageTemplate := template.Must(template.ParseFiles(baseLayoutPath, indexPagePath))
+
+	http.HandleFunc(indexPagePattern, func(responseWriter http.ResponseWriter, request *http.Request) {
+
+		err := indexPageTemplate.Execute(responseWriter, nil)
+
+		if err != nil {
+			panic(err)
+		}
 	})
 }
 
