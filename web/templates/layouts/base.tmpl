@@ -34,7 +34,33 @@
 
 	<body unresolved>
 
-		{{ block "page" . }}{{ end }}
+		<div class = "pfe-c-content layout-base">
+
+			<div class = "layout-base--header">
+
+				<pfe-band color-palette = "darkest">
+
+					<div class = "pfe-l-bullseye layout-base--header--title">
+
+						<img class = "layout-base--header--title--image"
+							 src   = "/static/images/logos/logo-primary.svg"
+							 alt   = "">
+
+						<h2 class = "layout-base--header--title--text">Carbon</h2>
+
+					</div>
+
+				</pfe-band>
+
+			</div>
+
+			<div class = "layout-base--page">
+
+				{{ block "page" . }}{{ end }}
+
+			</div>
+
+		</div>
 
 	</body>
 
