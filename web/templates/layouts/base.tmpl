@@ -34,27 +34,27 @@
 
 	<body unresolved>
 
-		<div class = "pfe-c-content layout-base">
+		<div class = "layout layout--base">
 
-			<div class = "layout-base--header">
+			<div class = "layout--base--navigation">
 
-				<pfe-band color-palette = "darkest">
+				<pfe-card>
 
-					<div class = "pfe-l-bullseye layout-base--header--title">
+					<div class = "pfe-l-bullseye layout--base--navigation--title">
 
-						<img class = "layout-base--header--title--image"
+						<img class = "layout--base--navigation--title--image"
 							 src   = "/static/images/logos/logo-primary.svg"
 							 alt   = "">
 
-						<h2 class = "layout-base--header--title--text">Carbon</h2>
+						<h2 class = "layout--base--navigation--title--text">Carbon</h2>
 
 					</div>
 
-				</pfe-band>
+				</pfe-card>
 
 			</div>
 
-			<div class = "layout-base--page">
+			<div class = "layout--base--page">
 
 				{{ block "page" . }}{{ end }}
 
