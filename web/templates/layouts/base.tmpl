@@ -36,25 +36,17 @@
 
 		<div class = "pfe-c-content layout layout--base">
 
-			<div class = "layout--base--navigation">
+			<div class = "pfe-l-bullseye layout--base--header">
 
-				<pfe-card>
+				<img class = "layout--base--header--image"
+					 src   = "/static/images/logos/logo-primary.svg"
+					 alt   = "">
 
-					<div class = "pfe-l-bullseye layout--base--navigation--title">
-
-						<img class = "layout--base--navigation--title--image"
-							 src   = "/static/images/logos/logo-primary.svg"
-							 alt   = "">
-
-						<h2 class = "layout--base--navigation--title--text">Carbon</h2>
-
-					</div>
-
-				</pfe-card>
+				<h2 class = "layout--base--header--text">Carbon</h2>
 
 			</div>
 
-			<div class = "layout--base--page">
+			<div class = "layout--base--body">
 
 				{{ block "page" . }}{{ end }}
 
